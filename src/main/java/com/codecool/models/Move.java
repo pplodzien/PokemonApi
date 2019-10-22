@@ -14,17 +14,13 @@ public class Move {
     private String type;
     private int attackDamage;
 
-    public Move(){
-
-    }
-
+    public Move(){ }
 
     public Move(String name, String type, int attackDamage){
         this.name = name;
         this.type = type;
         this.attackDamage = attackDamage;
     }
-
 
     public int getId() {
         return id;

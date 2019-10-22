@@ -13,7 +13,6 @@ import java.util.List;
 @Path("gyms")
 public class GymController {
 
-
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public List<Trainer> getAll()  {

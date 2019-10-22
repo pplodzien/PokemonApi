@@ -31,10 +31,7 @@ public class Trainer {
     )
     private List<Gym> gymsBeaten;
 
-
-    public Trainer(){
-
-    }
+    public Trainer(){ }
 
     public Trainer(String firstName, String lastName, String nickName, List<Pokemon> pokemons, List<Gym> gymsBeaten){
         this.firstName = firstName;
@@ -43,7 +40,6 @@ public class Trainer {
         this.pokemons = pokemons;
         this.gymsBeaten = gymsBeaten;
     }
-
 
     public int getId() {
         return id;

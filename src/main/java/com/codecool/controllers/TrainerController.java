@@ -19,9 +19,6 @@ import java.util.Random;
 @Path("trainers")
 public class TrainerController {
 
-
-
-
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public List<Trainer> getAll()  {
@@ -30,12 +27,10 @@ public class TrainerController {
         for (Trainer t: trainers) {
             Hibernate.initialize(t.getPokemons());
             Hibernate.initialize(t.getGymsBeaten());
-
         }
         Connector.getInstance().endTransaction();
         return trainers;
     }
-
 
     @GET
     @Path("{id}")
@@ -49,7 +44,6 @@ public class TrainerController {
         return trainer;
     }
 
-
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
@@ -62,7 +56,6 @@ public class TrainerController {
         String response = "trainer added";
         return Response.ok().entity(response).build();
     }
-
 
     @PUT
     @Path("{id}")
@@ -79,7 +72,6 @@ public class TrainerController {
         return Response.ok().entity(response).build();
     }
 
-
     @DELETE
     @Path("{id}")
     public Response deleteTrainer(@PathParam("id") int id) {
@@ -90,7 +82,6 @@ public class TrainerController {
         String response = "trainer deleted";
         return Response.ok().entity(response).build();
     }
-
 
     @GET
     @Path("/catch_pokemon")
@@ -161,5 +152,4 @@ public class TrainerController {
         }
         return damage;
     }
-
 }

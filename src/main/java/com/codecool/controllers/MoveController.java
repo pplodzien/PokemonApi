@@ -13,6 +13,7 @@ import java.util.List;
 
 @Path("/moves")
 public class MoveController {
+
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public List<Move> getAll() {
@@ -22,6 +23,7 @@ public class MoveController {
         Connector.getInstance().endTransaction();
         return moves;
     }
+
     @GET
     @Path("/{id}")
     @Produces(MediaType.APPLICATION_JSON)
@@ -31,18 +33,6 @@ public class MoveController {
         Connector.getInstance().endTransaction();
         return move;
     }
-
-//    @GET
-//    @Path("/{name}")
-//    @Produces(MediaType.APPLICATION_JSON)
-//    public Move getMoveByName(@PathParam("name") String name) {
-//        EntityManager em = Connector.getInstance().startTransaction();
-//        Query query = em.createQuery("from Move where name = :name");
-//        query.setParameter("name", name);
-//        Move move = (Move) query.getSingleResult();
-//        Connector.getInstance().endTransaction();
-//        return move;
-//    }
 
     @POST
     @Consumes(MediaType.APPLICATION_JSON)

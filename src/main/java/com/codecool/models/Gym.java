@@ -10,7 +10,6 @@ import javax.persistence.*;
 @Entity
 public class Gym {
 
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -18,12 +17,7 @@ public class Gym {
     private String type;
     private String location;
 
-
-
-
-    public Gym(){
-
-    }
+    public Gym(){ }
 
     public Gym(String name, String type, String location){
         this.name = name;
@@ -62,12 +56,4 @@ public class Gym {
     public void setLocation(String location) {
         this.location = location;
     }
-
-//    public Trainer getMaster() {
-//        return master;
-//    }
-//
-//    public void setMaster(Trainer master) {
-//        this.master = master;
-//    }
 }

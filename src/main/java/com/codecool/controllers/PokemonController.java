@@ -27,7 +27,6 @@ public class PokemonController {
         return pokemon;
     }
 
-
     @GET
     @Path("{id}/moves")
     @Produces(MediaType.APPLICATION_JSON)
@@ -39,7 +38,6 @@ public class PokemonController {
         return moves;
     }
 
-
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public List<Pokemon> getFilteredPokemons(@DefaultValue("%") @QueryParam("name") String name, @DefaultValue("%") @QueryParam("type") String type){
@@ -47,7 +45,6 @@ public class PokemonController {
         List<Pokemon> pokemons = em.createNamedQuery("Pokemon.findFiltered").setParameter("pokName", name).setParameter("pokType", type).getResultList();
         return pokemons;
     }
-
 
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
@@ -59,7 +56,6 @@ public class PokemonController {
         String response = "pokemon added";
         return Response.ok().entity(response).build();
     }
-
 
     @PUT
     @Path("{id}")
@@ -78,7 +74,6 @@ public class PokemonController {
         String response = "pokemon updated";
         return Response.ok().entity(response).build();
     }
-
 
     @DELETE
     @Path("{id}")

@@ -39,10 +39,7 @@ public class Pokemon {
     private String height;
     private String weight;
 
-    public Pokemon(){
-
-    }
-
+    public Pokemon(){ }
 
     public Pokemon(String name, String type, List<Move> moves, String nextEvolution, int pokedexNumber, String height, String weight) {
         this.name = name;
