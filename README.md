@@ -1,4 +1,8 @@
 # PokemonApi
+# Learning goals
+- practice JAX-RS / Jersey
+- practice JPA / Hibernate
+- app runs on Tomcat
 
 I would like to present you a Pokemon Api. Get data about pokemons, their moves, trainers and gyms they beaten. Try out one of two features allowing to fight or catch a pokemon. Below is a list with endpoints You can use:
  
