@@ -77,6 +77,6 @@
         <jersey.version>2.28-RC4</jersey.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <version.hibernate.validator>5.1.2.Final</version.hibernate.validator>
-        <version.postgres>42.1.1</version.postgres>
+        <version.postgres>42.2.25</version.postgres>
     </properties>
 </project>
